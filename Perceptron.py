@@ -61,10 +61,41 @@ class Perceptron:
         """
          inputs: [] -> array with the data associated with each data point.
 
-         return: float -> the sum provided by the current weights to be used by the activation function
+         return: int -> the value returned by the activation function.
         """
         sum = 0
         for i in range(0,len(self.weights)):
             sum += inputs[i]*self.weights[i]
         
-        return sum
+        return sign(sum)
+    
+    #Get the weights
+    def getWeights(self):
+        """
+        return: [] -> current weights for the perceptron.
+        """
+        return self.weights
+    #Set Learning rate
+    def setWeights(self, newWeights):
+        """
+        newWeights: [] -> array with the new weight values in the same ordered as the targeted dimensions.
+
+        return: None
+        """
+        self.weights = newWeights
+    #Get the weights
+    def getLr(self):
+        """
+        return: float -> current learning rate for the perceptron.
+        """
+        return self.lr
+    #Set Learning rate
+    def setLearning(self,lRate):
+        """
+        lRate: float -> new learning rate value.
+        return: None
+        """
+        self.lr = lRate
+    
+    def __str__(self):
+        return f'Perceptron Object -> Weights:({self.weights}, Learning Rate: {self.lr})'

@@ -32,10 +32,10 @@ class Perceptron:
     def __init__(self, n, lr):
         self.n = n
         self.lr = lr
-        self.weights = []
+        self.weights = [] #the n dimension weights plus 1 for the bias parameter
         #Initialize the weights randomly
-        for i in range(0, n):
-            self.weights[i] = random.random()
+        for i in range(0, n+1):
+            self.weights.append(random.random())
     
     #METHOD TO TRAIN THE PERCEPTRON
     #Training simply means updating the weights accordingly
@@ -90,7 +90,7 @@ class Perceptron:
         """
         return self.lr
     #Set Learning rate
-    def setLearning(self,lRate):
+    def setLr(self,lRate):
         """
         lRate: float -> new learning rate value.
         return: None

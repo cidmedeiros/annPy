@@ -59,8 +59,7 @@ class Perceptron:
     
     def predict(self,inputs):
         """
-         inputs: [] -> array with the data associated with each data point.
-
+         inputs: [] -> array with the data associated with each data point. 
          return: int -> the value returned by the activation function.
         """
         sum = 0

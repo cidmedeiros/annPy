@@ -1,5 +1,10 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
+import random as random
+
+def Hex_color():
+    L = '0123456789ABCDEF'
+    return '#'+ ''.join([random.choice(L) for i in range(6)][:])
 
 def plot2d(data,width,height,legendSize='xx-small'):
     fig, ax = plt.subplots(1,1, figsize=(width,height))
@@ -9,3 +14,5 @@ def plot2d(data,width,height,legendSize='xx-small'):
     fig.suptitle('Linearly Separable Data', fontsize='large')
     fig.legend(['Boundary','Class 1','Class 2'], loc='center right', fontsize = legendSize, title='Classes')
     plt.show()
+
+#def plotTraining(data,)

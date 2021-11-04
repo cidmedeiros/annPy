@@ -97,7 +97,6 @@ class Perceptron:
     def setWeights(self, newWeights):
         """
         newWeights: [] -> array with the new weight values in the same ordered as the targeted dimensions.
-
         return: None
         """
         self.weights = newWeights
@@ -114,6 +113,12 @@ class Perceptron:
         return: None
         """
         self.lr = lRate
+    
+    def getPredictions(self):
+        """
+        return: [] -> array containing the latest predictions made
+        """
+        return self.predictions
     
     def __str__(self):
         return f'Perceptron Object -> Weights:({self.weights}, Learning Rate: {self.lr})'

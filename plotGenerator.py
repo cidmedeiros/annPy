@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import random as random
 
-def Hex_color():
+def hexColor():
     L = '0123456789ABCDEF'
     return '#'+ ''.join([random.choice(L) for i in range(6)][:])
 
